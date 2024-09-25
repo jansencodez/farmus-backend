@@ -1,4 +1,5 @@
 {
   "version":2,
-  "builds":{{"api": "./api" , "use":"@vercel/node"}},
-  "routes":{{"api":"/(.*)", "dest":"/"}}}
+  "builds":[{"api": "./api" , "use":"@vercel/node"}],
+  "routes":[{"api":"/(.*)", "dest":"/"}]
+}
