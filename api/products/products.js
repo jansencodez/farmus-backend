@@ -1,8 +1,8 @@
-import dbConnect from '../../utils/dbConnect';
+import connectToDB from '../../config/db';
 import Product from '../../models/Product';
 
 export default async function handler(req, res) {
-  await dbConnect();
+  await connectToDB();
 
   if (req.method !== 'GET') {
     return res.status(405).json({ message: 'Method not allowed' });
