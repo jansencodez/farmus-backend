@@ -1,9 +1,9 @@
-import dbConnect from '../../utils/dbConnect';
+import connectDB from '../../utils/dbConnect';
 import Product from '../../models/Product';
 import jwt from 'jsonwebtoken';
 
 export default async function handler(req, res) {
-  await dbConnect();
+  await connectDB();
 
   const { id } = req.query;
 

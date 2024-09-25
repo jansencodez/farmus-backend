@@ -1,4 +1,4 @@
-import dbConnect from '../../utils/dbConnect';
+import connectDB from '../../config/db';
 import authenticateToken from '../../utils/authenticateToken';
 import User from '../../models/User';
 

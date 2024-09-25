@@ -1,9 +1,9 @@
-import dbConnect from '../../utils/dbConnect';
+import connectDB from '../../config/db';
 import authenticateToken from '../../utils/authenticateToken';
 import User from '../../models/User';
 
 export default async function handler(req, res) {
-  await dbConnect(); // Ensure the database connection
+  await connectDB; // Ensure the database connection
 
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });

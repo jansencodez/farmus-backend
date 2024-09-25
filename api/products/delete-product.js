@@ -1,10 +1,10 @@
-import dbConnect from '../../utils/dbConnect';
+import connectDB from '../../config/db';
 import Product from '../../models/Product';
 import authenticateToken from '../../utils/authenticateToken';
 
 export default async function handler(req, res) {
   // Ensure database connection
-  await dbConnect();
+  await connectDB();
 
   // Only allow DELETE method
   if (req.method !== 'DELETE') {
